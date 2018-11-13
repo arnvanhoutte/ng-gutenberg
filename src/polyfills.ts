@@ -19,26 +19,26 @@
  */
 
 /** IE9, IE10 and IE11 requires all of the following polyfills. **/
-// import 'core-js/es6/symbol';
-// import 'core-js/es6/object';
-// import 'core-js/es6/function';
-// import 'core-js/es6/parse-int';
-// import 'core-js/es6/parse-float';
-// import 'core-js/es6/number';
-// import 'core-js/es6/math';
-// import 'core-js/es6/string';
-// import 'core-js/es6/date';
-// import 'core-js/es6/array';
-// import 'core-js/es6/regexp';
-// import 'core-js/es6/map';
-// import 'core-js/es6/weak-map';
-// import 'core-js/es6/set';
+import 'core-js/es6/symbol';
+import 'core-js/es6/object';
+import 'core-js/es6/function';
+import 'core-js/es6/parse-int';
+import 'core-js/es6/parse-float';
+import 'core-js/es6/number';
+import 'core-js/es6/math';
+import 'core-js/es6/string';
+import 'core-js/es6/date';
+import 'core-js/es6/array';
+import 'core-js/es6/regexp';
+import 'core-js/es6/map';
+import 'core-js/es6/weak-map';
+import 'core-js/es6/set';
 
 /** IE10 and IE11 requires the following for NgClass support on SVG elements */
-// import 'classlist.js';  // Run `npm install --save classlist.js`.
+import 'classlist.js';  // Run `npm install --save classlist.js`.
 
 /** IE10 and IE11 requires the following for the Reflect API. */
-// import 'core-js/es6/reflect';
+import 'core-js/es6/reflect';
 
 
 /** Evergreen browsers require these. **/
@@ -51,7 +51,7 @@ import 'core-js/es7/reflect';
  * Only required if AnimationBuilder is used within the application and using IE/Edge or Safari.
  * Standard animation support in Angular DOES NOT require any polyfills (as of Angular 6.0).
  **/
-// import 'web-animations-js';  // Run `npm install --save web-animations-js`.
+import 'web-animations-js';  // Run `npm install --save web-animations-js`.
 
 /**
  * By default, zone.js will patch all possible macroTask and DomEvents
@@ -78,3 +78,49 @@ import 'zone.js/dist/zone';  // Included with Angular CLI.
 /***************************************************************************************************
  * APPLICATION IMPORTS
  */
+
+import regeneratorRuntime from 'regenerator-runtime';
+
+(<any>window).regeneratorRuntime = regeneratorRuntime;
+(window as any).global = window;
+(<any>window).wp = (<any>window).wp || {};
+
+// User settings
+(<any>window).userSettings = (<any>window).userSettings || {
+  secure: '',
+  time: 1234567,
+  uid: 1,
+};
+
+// API settings
+
+(<any>window).wpApiSettings = (<any>window).wpApiSettings || {};
+(<any>window).wpApiSettingsroot = (<any>window).wpApiSettings.root || window.location.origin;
+(<any>window).wpApiSettingsnonce = (<any>window).wpApiSettings.nonce || '123456789';
+(<any>window).wpApiSettingsversionString = (<any>window).wpApiSettings.versionString || 'wp/v2/';
+
+// postboxes
+(<any>window).postboxes = (<any>window).postboxes || {
+  add_postbox_toggles: (page, args) => {
+    console.log('page', page);
+    console.log('args', args);
+  },
+};
+
+// editorL10n
+(<any>window).wpEditorL10n = (<any>window).wpEditorL10n || {
+  tinymce: {
+    baseUrl: 'node_modules/tinymce',
+    settings: {
+      external_plugins: [],
+      plugins: 'charmap,colorpicker,hr,lists,media,paste,tabfocus,textcolor,fullscreen', // ,wordpress,wpautoresize,wpeditimage,wpemoji,wpgallery,wplink,wpdialogs,wptextpattern,wpview',
+      toolbar1: 'formatselect,bold,italic,bullist,numlist,blockquote,alignleft,aligncenter,alignright,link,unlink,wp_more,spellchecker,kitchensink',
+      toolbar2: 'strikethrough,hr,forecolor,pastetext,removeformat,charmap,outdent,indent,undo,redo,wp_help',
+      toolbar3: '',
+      toolbar4: '',
+    },
+    suffix: '.min',
+  },
+};
+
+
