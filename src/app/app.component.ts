@@ -1,5 +1,5 @@
 import { Component, AfterViewInit } from '@angular/core';
-import {editPost} from '../gutenberg/gutenberg';
+import { data, editPost, domReady } from '@frontkom/gutenberg-js';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +9,9 @@ import {editPost} from '../gutenberg/gutenberg';
 export class AppComponent implements AfterViewInit {
   title = 'ng-gutenberg';
 
-  settings = {
+ngAfterViewInit(): void {
+
+  const settings = {
     alignWide: true,
     availableTemplates: [],
     allowedBlockTypes: true,
@@ -23,10 +25,18 @@ export class AppComponent implements AfterViewInit {
     canSave: false,
     canAutosave: false,
     mediaLibrary: true,
-};
+  };
 
-ngAfterViewInit(): void {
-  console.log((<any>window).regeneratorRuntime);
-    editPost.initializeEditor('editor', 'page', 1, this.settings, {});
+  // reset localStorage
+  localStorage.removeItem('g-editor-page');
+
+  // Disable tips
+  data.dispatch('core/nux').disableTips();
+
+  (<any>window)._wpLoadGutenbergEditor = new Promise(function (resolve) {
+    domReady(function () {
+      editPost.initializeEditor('editor', 'page', 1, settings, {});
+    });
+});
 }
 }

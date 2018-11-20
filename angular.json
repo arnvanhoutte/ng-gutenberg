@@ -23,9 +23,15 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/@frontkom/gutenberg-js/build/css/block-library/style.css",
+              "node_modules/@frontkom/gutenberg-js/build/css/style.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/react/umd/react.production.min.js",
+              "node_modules/react-dom/umd/react-dom.production.min.js",
+              "node_modules/moment/min/moment.min.js",
+              "node_modules/jquery/dist/jquery.min.js"]
           },
           "configurations": {
             "production": {
