@@ -1,4 +1,10 @@
 import { Component, AfterViewInit } from '@angular/core';
+
+/*import {apiFetch}  from './api-fetch'
+
+(<any>window).wp = {
+  apiFetch
+};*/
 import { data, editPost, domReady } from '@frontkom/gutenberg-js';
 
 @Component({
@@ -20,10 +26,10 @@ ngAfterViewInit(): void {
     titlePlaceholder: 'Add title',
     bodyPlaceholder: 'Insert your custom block',
     isRTL: false,
-    autosaveInterval: 0,
+    autosaveInterval: 10,
     canPublish: false,
-    canSave: false,
-    canAutosave: false,
+    canSave: true,
+    canAutosave: true,
     mediaLibrary: true,
   };
 
@@ -33,10 +39,6 @@ ngAfterViewInit(): void {
   // Disable tips
   data.dispatch('core/nux').disableTips();
 
-  (<any>window)._wpLoadGutenbergEditor = new Promise(function (resolve) {
-    domReady(function () {
       editPost.initializeEditor('editor', 'page', 1, settings, {});
-    });
-});
 }
 }

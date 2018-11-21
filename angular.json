@@ -20,12 +20,22 @@
             "tsConfig": "src/tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/plugins",
+              "src/skins",
+              "src/themes"
             ],
             "styles": [
               "src/styles.css",
-              "node_modules/@frontkom/gutenberg-js/build/css/block-library/style.css",
-              "node_modules/@frontkom/gutenberg-js/build/css/style.css"
+              "node_modules/@wordpress/format-library/build-style/style.css",
+              "node_modules/@wordpress/components/build-style/style.css",
+              "node_modules/@wordpress/nux/build-style/style.css",
+              "node_modules/@wordpress/editor/build-style/style.css",
+              "node_modules/@wordpress/block-library/build-style/theme.css",
+              "node_modules/@wordpress/block-library/build-style/style.css",
+              "node_modules/@wordpress/edit-post/build-style/style.css",
+              "node_modules/@frontkom/gutenberg-js/build/css/style.css",
+              "node_modules/@frontkom/gutenberg-js/build/css/block-library/style.css"
             ],
             "scripts": [
               "node_modules/react/umd/react.production.min.js",

@@ -79,10 +79,7 @@ import 'zone.js/dist/zone';  // Included with Angular CLI.
  * APPLICATION IMPORTS
  */
 
-function apiFetch(options){
-  console.log(options);
-  return new Promise(resolve => { resolve({page: "test" }); });
-}
+import {apiFetch}  from 'src/app/api-fetch'
 
 (<any>window).wp = {
   apiFetch
