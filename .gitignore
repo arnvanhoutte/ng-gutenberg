@@ -37,3 +37,7 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+.vs/slnx.sqlite
+.vs/ng-gutenberg/v15/.suo
+.vs/ProjectSettings.json
+.vs/VSWorkspaceState.json

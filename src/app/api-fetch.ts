@@ -18,6 +18,7 @@ export const apiFetch = options => {
     case '/wp/v2/pages/1?context=edit':
       res = JSON.parse(localStorage.getItem('g-editor-page')) || page;
       break;
+    case '/wp/v2/pages/1':
     case '/wp/v2/pages/1/autosaves':
       item = JSON.parse(localStorage.getItem('g-editor-page')) || page;
       if (options.data) {
