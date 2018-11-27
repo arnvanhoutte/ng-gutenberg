@@ -1,11 +1,11 @@
 import { Component, AfterViewInit } from '@angular/core';
-
+import {apiFetch as fetch} from './new-api-fetch';
 /*import {apiFetch}  from './api-fetch'
 
 (<any>window).wp = {
   apiFetch
 };*/
-import { data, editPost, domReady } from '@frontkom/gutenberg-js';
+import { data, editPost, apiFetch } from '@frontkom/gutenberg-js';
 
 @Component({
   selector: 'app-root',
@@ -16,6 +16,10 @@ export class AppComponent implements AfterViewInit {
   title = 'ng-gutenberg';
 
 ngAfterViewInit(): void {
+
+  (<any>window).save = function(content) {
+    console.warn(content);
+  };
 
   const settings = {
     alignWide: true,

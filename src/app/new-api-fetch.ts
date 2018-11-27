@@ -22,7 +22,7 @@ export const apiFetch = options => {
     case '/wp/v2/pages/1/autosaves':
       item = JSON.parse(localStorage.getItem('g-editor-page')) || page;
       if (options.data) {
-        (<any>window).save(options.data.content);
+        console.info(options.data.content);
         item = {
           ...item,
           // update content
@@ -49,6 +49,7 @@ export const apiFetch = options => {
     default:
       break;
   }
+
   console.log(res);
   return new Promise(resolve => { resolve(res); });
 };
