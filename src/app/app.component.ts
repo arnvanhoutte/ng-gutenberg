@@ -1,11 +1,5 @@
 import { Component, AfterViewInit } from '@angular/core';
-import {apiFetch as fetch} from './new-api-fetch';
-/*import {apiFetch}  from './api-fetch'
-
-(<any>window).wp = {
-  apiFetch
-};*/
-import { data, editPost, apiFetch } from '@frontkom/gutenberg-js';
+import { data, editPost } from '@frontkom/gutenberg-js';
 
 @Component({
   selector: 'app-root',
@@ -15,34 +9,36 @@ import { data, editPost, apiFetch } from '@frontkom/gutenberg-js';
 export class AppComponent implements AfterViewInit {
   title = 'ng-gutenberg';
 
-ngAfterViewInit(): void {
+  ngAfterViewInit(): void {
 
-  (<any>window).save = function(content) {
-    console.warn(content);
-  };
+    (<any>window).save = function(content) {
+      console.warn(content);
+    };
 
-  const settings = {
-    alignWide: true,
-    availableTemplates: [],
-    allowedBlockTypes: true,
-    disableCustomColors: false,
-    disablePostFormats: false,
-    titlePlaceholder: 'Add title',
-    bodyPlaceholder: 'Insert your custom block',
-    isRTL: false,
-    autosaveInterval: 10,
-    canPublish: false,
-    canSave: true,
-    canAutosave: true,
-    mediaLibrary: true,
-  };
+    const settings = {
+      alignWide: true,
+      availableTemplates: [],
+      allowedBlockTypes: true,
+      disableCustomColors: false,
+      disablePostFormats: false,
+      titlePlaceholder: 'Add title',
+      bodyPlaceholder: 'Insert your custom block',
+      isRTL: false,
+      autosaveInterval: 10,
+      canPublish: false,
+      canSave: true,
+      canAutosave: true,
+      mediaLibrary: true,
+      postLock: {
+          isLocked: false,
+      }
+    };
 
-  // reset localStorage
-  localStorage.removeItem('g-editor-page');
+    // reset localStorage
+    localStorage.removeItem('g-editor-page');
 
-  // Disable tips
-  data.dispatch('core/nux').disableTips();
-
-      editPost.initializeEditor('editor', 'page', 1, settings, {});
-}
+    // Disable tips
+    data.dispatch('core/nux').disableTips();
+    editPost.initializeEditor('editor', 'page', 1, settings, {});
+  }
 }
