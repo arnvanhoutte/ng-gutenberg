@@ -3,6 +3,16 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.4.  
 It is a desperate attempt to try to include Wordpress Gutenberg in Angular 2+. All help is appreciated
 
+## TODO
+
+* Import React and React-DOM in component instead of application-wide
+
+* Set api-fetch in component instead of in polyfills
+
+* Find a way to update the editor when navigating to it a second time
+
+IF YOU CAN HELP WITH THIS IN ANY WAY, PLEASE DO NOT HESITATE TO DO SO
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
