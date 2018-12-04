@@ -1,6 +1,6 @@
 # ng-gutenberg
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.4.  
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.1.  
 It is a desperate attempt to try to include Wordpress Gutenberg in Angular 2+. All help is appreciated
 
 ## TODO

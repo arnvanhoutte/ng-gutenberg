@@ -10,11 +10,6 @@ export class AppComponent implements AfterViewInit {
   title = 'ng-gutenberg';
 
   ngAfterViewInit(): void {
-
-    (<any>window).save = function(content) {
-      console.warn(content);
-    };
-
     const settings = {
       alignWide: true,
       availableTemplates: [],
