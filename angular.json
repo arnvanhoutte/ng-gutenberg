@@ -26,9 +26,9 @@
               "src/themes"
             ],
             "styles": [
-              "src/styles.scss",
               "node_modules/@frontkom/gutenberg-js/build/css/style.css",
-              "node_modules/@frontkom/gutenberg-js/build/css/block-library/style.css"
+              "node_modules/@frontkom/gutenberg-js/build/css/block-library/style.css",
+              "src/styles.scss"
             ],
             "scripts": [
               "node_modules/uikit/dist/js/uikit.min.js",
