@@ -1,1 +1,6 @@
-<div id="editor" class="gutenberg__editor"></div>
+
+<button (click)="logBlocks()">click me</button>
+
+<editor #editor [(blocks)]="blocks" contentClass="gutenberg__editor"></editor>
+
+<button (click)="logBlocks()">click me</button>

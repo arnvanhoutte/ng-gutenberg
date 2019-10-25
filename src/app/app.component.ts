@@ -1,39 +1,27 @@
-import { Component, AfterViewInit } from '@angular/core';
-import { data, editPost } from '@frontkom/gutenberg-js';
+import { Component, ViewChild } from '@angular/core';
+import { EditorComponent, IBlock } from './editor.component';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements AfterViewInit {
-  title = 'ng-gutenberg';
+export class AppComponent {
+  title = 'gutenberg';
+  blocks: IBlock[];
+  @ViewChild('editor', { static: true }) protected editor: EditorComponent;
 
-  ngAfterViewInit(): void {
-    const settings = {
-      alignWide: true,
-      availableTemplates: [],
-      allowedBlockTypes: true,
-      disableCustomColors: false,
-      disablePostFormats: false,
-      titlePlaceholder: 'Add title',
-      bodyPlaceholder: 'Insert your custom block',
-      isRTL: false,
-      autosaveInterval: 10,
-      canPublish: false,
-      canSave: true,
-      canAutosave: true,
-      mediaLibrary: true,
-      postLock: {
-          isLocked: false,
-      }
-    };
-
-    // reset localStorage
-    localStorage.removeItem('g-editor-page');
-
-    // Disable tips
-    data.dispatch('core/nux').disableTips();
-    editPost.initializeEditor('editor', 'page', 1, settings, {});
+  constructor() {
+    var blocks  = localStorage.getItem("blocks");
+    if (blocks){
+      this.blocks = JSON.parse(blocks);
+    }
+    else{
+      this.blocks = [];
+    }
+  }
+  logBlocks() {
+    console.log(this.blocks);
+    localStorage.setItem("blocks", JSON.stringify(this.blocks));
   }
 }
