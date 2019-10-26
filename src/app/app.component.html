@@ -1,6 +1,5 @@
+<block-editor-provider #editor *ngIf="blocks" [(blocks)]="blocks" contentClass="gutenberg__editor"></block-editor-provider>
 
 <button (click)="logBlocks()">click me</button>
-
-<editor #editor *ngIf="blocks" [(blocks)]="blocks" contentClass="gutenberg__editor"></editor>
-
-<button (click)="logBlocks()">click me</button>
+<editor-history-undo></editor-history-undo>
+<editor-history-redo></editor-history-redo>

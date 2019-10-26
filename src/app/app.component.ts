@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { EditorComponent, IBlock } from './editor.component';
+import { BlockEditorProviderComponent, IBlock } from '../gutenberg/block-editor-provider.component';
 import { serialize, parse } from '@wordpress/blocks';
 
 
@@ -11,14 +11,15 @@ import { serialize, parse } from '@wordpress/blocks';
 export class AppComponent {
   title = 'gutenberg';
   blocks: IBlock[];
-  @ViewChild('editor', { static: true }) protected editor: EditorComponent;
+  @ViewChild('editor', { static: true }) protected editor: BlockEditorProviderComponent;
 
   constructor() {
     var html = localStorage.getItem("html");
-    if(html){
+    if (html) {
       var json = JSON.parse(html)
       this.blocks = parse(json);
-    }else{
+    }
+    else {
       this.blocks = [];
     }
   }

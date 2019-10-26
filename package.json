@@ -28,6 +28,8 @@
     "@wordpress/block-editor": "^3.2.3",
     "@wordpress/block-library": "^2.9.3",
     "@wordpress/blocks": "^6.7.2",
+    "@wordpress/editor": "^9.7.3",
+    "@wordpress/format-library": "^1.9.3",
     "classlist.js": "^1.1.20150312",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
