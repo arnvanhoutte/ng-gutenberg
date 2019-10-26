@@ -14,13 +14,23 @@
       "sourceRoot": "src",
       "prefix": "app",
       "architect": {
+        "build-webpack": {
+          "builder": "@angular-devkit/build-webpack:webpack",
+          "options": {
+            "webpackConfig": "webpack.config.js"
+          }
+        },
         "build": {
           "builder": "@angular-builders/custom-webpack:browser",
           "options": {
             "customWebpackConfig": {
               "path": "./custom-webpack.config.js",
-              "mergeStrategies": { "module.rules": "prepend" },
-              "replaceDuplicatePlugins": true
+              "mergeStrategies": {
+                "optimization": "replace",
+                "module.optimization": "replace",
+                "module.rules": "replace"
+              },
+              "replaceDuplicatePlugins": false
             },
             "outputPath": "dist/gutenberg",
             "index": "src/index.html",
@@ -69,10 +79,13 @@
           "options": {
             "customWebpackConfig": {
               "path": "./custom-webpack.config.js",
-              "mergeStrategies": { "module.rules": "prepend" },
+              "mergeStrategies": {
+                "optimization": "replace",
+                "module.optimization": "replace",
+                "module.rules": "prepend"
+              },
               "replaceDuplicatePlugins": true
             },
-            
             "browserTarget": "gutenberg:build"
           },
           "configurations": {
@@ -130,6 +143,7 @@
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "gutenberg"
 }

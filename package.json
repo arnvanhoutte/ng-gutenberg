@@ -12,6 +12,7 @@
   },
   "private": true,
   "dependencies": {
+    "@angular-devkit/build-webpack": "^0.803.14",
     "@angular-react/core": "^1.0.1",
     "@angular/animations": "~8.0.0",
     "@angular/common": "~8.0.0",

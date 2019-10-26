@@ -15,7 +15,12 @@ export class AppComponent {
 
   constructor() {
     var html = localStorage.getItem("html");
-    this.blocks = parse(JSON.parse(html));
+    if(html){
+      var json = JSON.parse(html)
+      this.blocks = parse(json);
+    }else{
+      this.blocks = [];
+    }
   }
   logBlocks() {
     localStorage.setItem("blocks", JSON.stringify(this.blocks));
