@@ -2,7 +2,6 @@ import { Component, ChangeDetectionStrategy, OnInit, EventEmitter, ElementRef, V
 import {
   BlockEditorProvider
 } from '@wordpress/block-editor';
-import * as React from 'react';
 import { ReactWrapperComponent } from '@angular-react/core';
 import * as apiFetch from '@wordpress/api-fetch';
 import { apiFetch as newApi } from '../data/api-fetch'

@@ -1,6 +1,6 @@
 
 <button (click)="logBlocks()">click me</button>
 
-<editor #editor [(blocks)]="blocks" contentClass="gutenberg__editor"></editor>
+<editor #editor *ngIf="blocks" [(blocks)]="blocks" contentClass="gutenberg__editor"></editor>
 
 <button (click)="logBlocks()">click me</button>

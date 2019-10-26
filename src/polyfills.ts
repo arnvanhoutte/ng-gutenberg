@@ -1,5 +1,10 @@
+
+import { environment } from './environments/environment.prod';
+
 (<any>window).process = {
-    env:environment.production
+    env: {
+        NODE_ENV:'production'
+    }
 };
 (<any>window).global = window
 
@@ -62,7 +67,6 @@
  * Zone JS is required by default for Angular itself.
  */
 import 'zone.js/dist/zone';  // Included with Angular CLI.
-import { environment } from './environments/environment.prod';
 
 
 /***************************************************************************************************
