@@ -10,15 +10,15 @@ module.exports = {
                 warnings: false,
                 parse: {},
                 compress:false,
-                mangle: true, // Note `mangle.properties` is `false` by default.
+                mangle: true,
                 module: false,
                 output: null,
                 toplevel: false,
                 nameCache: null,
-                ie8: false,
+                ie8: true,
                 keep_classnames: true,
                 keep_fnames: true,
-                safari10: false
+                safari10: true
             }
         })]
     }

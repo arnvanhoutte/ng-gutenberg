@@ -27,12 +27,15 @@
     "@wordpress/api-fetch": "^3.6.3",
     "@wordpress/block-editor": "^3.2.3",
     "@wordpress/block-library": "^2.9.3",
+    "@wordpress/blocks": "^6.7.2",
+    "classlist.js": "^1.1.20150312",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "rxjs": "~6.4.0",
     "tslib": "^1.9.0",
     "uglify-es-webpack-plugin": "^0.10.0",
     "uglifyjs-webpack-plugin": "^2.2.0",
+    "web-animations-js": "^2.3.2",
     "zone.js": "~0.9.1"
   },
   "devDependencies": {
