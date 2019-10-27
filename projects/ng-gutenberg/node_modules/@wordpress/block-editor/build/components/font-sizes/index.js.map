@@ -1,0 +1,1 @@
+{"version":3,"sources":["@wordpress/block-editor/src/components/font-sizes/index.js"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA;;AACA;;AACA","sourcesContent":["export { getFontSize, getFontSizeClass } from './utils';\nexport { default as FontSizePicker } from './font-size-picker';\nexport { default as withFontSizes } from './with-font-sizes';\n"]}

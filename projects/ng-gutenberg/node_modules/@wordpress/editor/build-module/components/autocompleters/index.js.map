@@ -1,0 +1,1 @@
+{"version":3,"sources":["@wordpress/editor/src/components/autocompleters/index.js"],"names":["default","blockAutocompleter","userAutocompleter"],"mappings":"AAAA,SAASA,OAAO,IAAIC,kBAApB,QAA8C,SAA9C;AACA,SAASD,OAAO,IAAIE,iBAApB,QAA6C,QAA7C","sourcesContent":["export { default as blockAutocompleter } from './block';\nexport { default as userAutocompleter } from './user';\n"]}

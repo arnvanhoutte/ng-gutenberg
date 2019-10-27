@@ -1,0 +1,1 @@
+{"version":3,"sources":["@wordpress/blocks/src/api/raw-handling/index.native.js"],"names":["getPhrasingContentSchema","pasteHandler"],"mappings":"AAAA,SAASA,wBAAT,QAAyC,oBAAzC;AACA,SAASC,YAAT,QAA6B,iBAA7B","sourcesContent":["export { getPhrasingContentSchema } from './phrasing-content';\nexport { pasteHandler } from './paste-handler';\n"]}

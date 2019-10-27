@@ -1,0 +1,1 @@
+{"version":3,"sources":["@wordpress/block-editor/src/hooks/index.js"],"names":[],"mappings":"AAAA;;;AAGA,OAAO,SAAP;AACA,OAAO,UAAP;AACA,OAAO,qBAAP;AACA,OAAO,wBAAP","sourcesContent":["/**\n * Internal dependencies\n */\nimport './align';\nimport './anchor';\nimport './custom-class-name';\nimport './generated-class-name';\n"]}

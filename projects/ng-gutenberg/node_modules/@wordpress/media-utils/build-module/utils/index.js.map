@@ -1,0 +1,1 @@
+{"version":3,"sources":["@wordpress/media-utils/src/utils/index.js"],"names":["uploadMedia"],"mappings":"AAAA,SAASA,WAAT,QAA4B,gBAA5B","sourcesContent":["export { uploadMedia } from './upload-media';\n"]}

@@ -1,0 +1,1 @@
+{"version":3,"sources":["@wordpress/media-utils/src/components/index.js"],"names":["default","MediaUpload"],"mappings":"AAAA,SAASA,OAAO,IAAIC,WAApB,QAAuC,gBAAvC","sourcesContent":["export { default as MediaUpload } from './media-upload';\n"]}

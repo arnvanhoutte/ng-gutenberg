@@ -1,6 +1,6 @@
 {
   "name": "ng-gutenberg",
-  "version": "0.5.3",
+  "version": "0.6.0",
   "author": "Arn Vanhoutte",
   "repository": {
     "type": "git",
@@ -32,7 +32,6 @@
     "tslib": "^1.9.0"
   },
   "peerDependencies": {
-    
     "@angular/common": "^8.0.3",
     "@angular/core": "^8.0.3"
   }

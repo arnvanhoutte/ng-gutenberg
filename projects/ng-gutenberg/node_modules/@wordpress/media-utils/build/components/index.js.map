@@ -1,0 +1,1 @@
+{"version":3,"sources":["@wordpress/media-utils/src/components/index.js"],"names":[],"mappings":";;;;;;;;;;;;;;AAAA","sourcesContent":["export { default as MediaUpload } from './media-upload';\n"]}

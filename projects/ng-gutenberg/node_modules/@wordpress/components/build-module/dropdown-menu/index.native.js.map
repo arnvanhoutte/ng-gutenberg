@@ -1,0 +1,1 @@
+{"version":3,"sources":["@wordpress/components/src/dropdown-menu/index.native.js"],"names":["DropdownMenu"],"mappings":"AACA,SAASA,YAAT,GAAwB;AACvB,SAAO,IAAP;AACA;;AAED,eAAeA,YAAf","sourcesContent":["\nfunction DropdownMenu() {\n\treturn null;\n}\n\nexport default DropdownMenu;\n"]}
