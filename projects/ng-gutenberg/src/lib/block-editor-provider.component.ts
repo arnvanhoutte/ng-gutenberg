@@ -1,7 +1,6 @@
 import { Component, ChangeDetectionStrategy, OnInit, EventEmitter, ElementRef, ViewChild, ChangeDetectorRef, Renderer2, Input, Output } from '@angular/core';
 import { ReactWrapperComponent } from '@angular-react/core';
 import * as apiFetch from '@wordpress/api-fetch';
-import { registerCoreBlocks } from '@wordpress/block-library';
 import '@wordpress/format-library';
 import '@wordpress/editor'; // This shouldn't be necessary
 
@@ -49,7 +48,6 @@ export class BlockEditorProviderComponent extends ReactWrapperComponent<IEditorP
   }
 
   ngOnInit(): void {
-    registerCoreBlocks();
   }
 }
 

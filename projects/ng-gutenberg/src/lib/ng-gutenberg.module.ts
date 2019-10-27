@@ -1,6 +1,7 @@
 import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { registerElement } from '@angular-react/core';
 import { AngularReactBrowserModule } from '@angular-react/core';
+import { registerCoreBlocks } from '@wordpress/block-library';
 
 import {
   BlockEditorProvider,
@@ -41,7 +42,7 @@ const components = [
 export class NgGutenbergModule {
 
   constructor() {
-    //registerCoreBlocks();
+    registerCoreBlocks();
 
     registerElement('BlockEditorProvider', () => BlockEditorProvider);
     registerElement('WritingFlow', () => WritingFlow);
