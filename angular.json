@@ -143,6 +143,41 @@
           }
         }
       }
+    },
+    "ng-gutenberg": {
+      "projectType": "library",
+      "root": "projects/ng-gutenberg",
+      "sourceRoot": "projects/ng-gutenberg/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ng-gutenberg/tsconfig.lib.json",
+            "project": "projects/ng-gutenberg/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ng-gutenberg/src/test.ts",
+            "tsConfig": "projects/ng-gutenberg/tsconfig.spec.json",
+            "karmaConfig": "projects/ng-gutenberg/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ng-gutenberg/tsconfig.lib.json",
+              "projects/ng-gutenberg/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "gutenberg"

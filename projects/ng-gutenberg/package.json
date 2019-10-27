@@ -1,0 +1,36 @@
+{
+  "name": "ng-gutenberg",
+  "version": "0.5.0",
+  "author": "Arn Vanhoutte",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/arnvanhoutte/ng-gutenberg.git"
+  },
+  "bugs": {
+    "url": "https://github.com/arnvanhoutte/ng-gutenberg/issues"
+  },
+  "homepage": "https://github.com/arnvanhoutte/ng-gutenberg",
+  "keywords": [
+    "angular",
+    "wordpress",
+    "gutenberg"
+  ],
+	"license": "GPL-2.0-or-later",
+  "peerDependencies": {
+    "@angular-react/core": "^1.0.1",
+    "@angular/common": "^8.0.3",
+    "@angular/core": "^8.0.3",
+    "@types/react": "^16.9.11",
+    "@types/react-dom": "^16.9.3",
+    "@wordpress/api-fetch": "^3.6.3",
+    "@wordpress/block-editor": "^3.2.3",
+    "@wordpress/block-library": "^2.9.3",
+    "@wordpress/blocks": "^6.7.2",
+    "@wordpress/editor": "^9.7.3",
+    "@wordpress/format-library": "^1.9.3",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
+    "rxjs": "~6.4.0",
+    "tslib": "^1.9.0"
+  }
+}

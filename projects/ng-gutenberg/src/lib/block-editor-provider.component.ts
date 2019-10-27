@@ -1,30 +1,33 @@
 import { Component, ChangeDetectionStrategy, OnInit, EventEmitter, ElementRef, ViewChild, ChangeDetectorRef, Renderer2, Input, Output } from '@angular/core';
 import { ReactWrapperComponent } from '@angular-react/core';
 import * as apiFetch from '@wordpress/api-fetch';
-import { apiFetch as newApi } from '../data/api-fetch'
 import { registerCoreBlocks } from '@wordpress/block-library';
 import '@wordpress/format-library';
+import '@wordpress/editor'; // This shouldn't be necessary
 
 @Component({
   selector: 'block-editor-provider',
   template: `
-    <BlockEditorProvider
-      #reactNode
-      [value]="blocks"
-      (onChange)="onChange($event)"
-    >
-      <div className="editor-styles-wrapper">
-        <BlockEditorKeyboardShortcuts></BlockEditorKeyboardShortcuts>
-          <WritingFlow>
-            <ObserveTyping>
-              <BlockList></BlockList>
-            </ObserveTyping>
-          </WritingFlow>
-      </div>
-  </BlockEditorProvider>
-  `,
+  <SlotFillProvider>
+    <DropZoneProvider>
+      <BlockEditorProvider
+        #reactNode
+        [value]="blocks"
+        (onChange)="onChange($event)"
+      >
+        <div className="editor-styles-wrapper">
+          <BlockEditorKeyboardShortcuts></BlockEditorKeyboardShortcuts>
+            <WritingFlow>
+              <ObserveTyping>
+                <BlockList></BlockList>
+              </ObserveTyping>
+            </WritingFlow>
+        </div>
+      </BlockEditorProvider>
+    </DropZoneProvider>
+  </SlotFillProvider>`,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  styles: ['react-renderer', './editor.component.scss']
+  styles: ['react-renderer']
 })
 export class BlockEditorProviderComponent extends ReactWrapperComponent<IEditorProps> implements OnInit {
   reactNodeRef: ElementRef
@@ -37,7 +40,6 @@ export class BlockEditorProviderComponent extends ReactWrapperComponent<IEditorP
 
   constructor(elementRef: ElementRef, changeDetectorRef: ChangeDetectorRef, renderer: Renderer2) {
     super(elementRef, changeDetectorRef, renderer);
-    this.initApiFetch();
     this.updateBlocks = [];
   }
 
@@ -46,12 +48,8 @@ export class BlockEditorProviderComponent extends ReactWrapperComponent<IEditorP
     this.blocksChange.emit(this.blocks);
   }
 
-  initApiFetch() {
-    apiFetch.default.setFetchHandler(newApi);
-    registerCoreBlocks();
-  }
-
   ngOnInit(): void {
+    registerCoreBlocks();
   }
 }
 

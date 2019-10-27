@@ -1,6 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
-import { BlockEditorProviderComponent, IBlock } from '../gutenberg/block-editor-provider.component';
 import { serialize, parse } from '@wordpress/blocks';
+import { BlockEditorProviderComponent, IBlock } from 'projects/ng-gutenberg/src/lib/block-editor-provider.component';
 
 
 @Component({

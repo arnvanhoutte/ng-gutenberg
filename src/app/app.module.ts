@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { GutenbergModule } from 'src/gutenberg/gutenberg.module';
+import { NgGutenbergModule } from 'projects/ng-gutenberg/src/public-api';
 
  
 @NgModule({
@@ -10,7 +10,7 @@ import { GutenbergModule } from 'src/gutenberg/gutenberg.module';
     AppComponent
   ],
   imports: [
-    GutenbergModule,
+    NgGutenbergModule,
     BrowserModule,
     AppRoutingModule
   ],

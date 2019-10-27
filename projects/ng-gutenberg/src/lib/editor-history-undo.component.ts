@@ -2,14 +2,14 @@ import { Component, ChangeDetectionStrategy, OnInit, ElementRef, ViewChild, Chan
 import { ReactWrapperComponent } from '@angular-react/core';
 
 @Component({
-  selector: 'editor-history-redo',
+  selector: 'editor-history-undo',
   template: `
-    <EditorHistoryRedo #reactNode></EditorHistoryRedo>
+    <EditorHistoryUndo #reactNode></EditorHistoryUndo>
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  styles: ['react-renderer', './editor.component.scss']
+  styles: ['react-renderer']
 })
-export class EditorHistoryRedoComponent extends ReactWrapperComponent<IEditorProps> implements OnInit {
+export class EditorHistoryUndoComponent extends ReactWrapperComponent<any> implements OnInit {
   reactNodeRef: ElementRef
   @ViewChild('reactNode', { static: true }) protected set setReactNodeRef(ref: ElementRef) {
     this.reactNodeRef = ref;
@@ -20,21 +20,4 @@ export class EditorHistoryRedoComponent extends ReactWrapperComponent<IEditorPro
   }
   ngOnInit(): void {
   }
-}
-
-export interface IEditorProps extends React.HTMLAttributes<HTMLElement> {
-
-}
-
-export interface IBlock {
-  attributes: IAttributes;
-  clientId: string;
-  innerBlocks: any[];
-  isValid: boolean;
-  name: string;
-}
-
-export interface IAttributes {
-  content: string;
-  dropCap: boolean;
 }

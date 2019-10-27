@@ -1,6 +1,6 @@
 {
-  "name": "gutenberg",
-  "version": "0.0.0",
+  "name": "ng-gutenberg",
+  "version": "0.5.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -10,7 +10,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
-  "private": true,
+  "private": false,
   "dependencies": {
     "@angular-devkit/build-webpack": "^0.803.14",
     "@angular-react/core": "^1.0.1",
@@ -43,6 +43,7 @@
   "devDependencies": {
     "@angular-builders/custom-webpack": "^8.2.0",
     "@angular-devkit/build-angular": "~0.800.0",
+    "@angular-devkit/build-ng-packagr": "~0.800.6",
     "@angular/cli": "~8.0.2",
     "@angular/compiler-cli": "~8.0.0",
     "@angular/language-service": "~8.0.0",
@@ -57,9 +58,11 @@
     "karma-coverage-istanbul-reporter": "~2.0.1",
     "karma-jasmine": "~2.0.1",
     "karma-jasmine-html-reporter": "^1.4.0",
+    "ng-packagr": "^5.1.0",
     "protractor": "~5.4.0",
     "terser-webpack-plugin": "^2.2.1",
     "ts-node": "~7.0.0",
+    "tsickle": "^0.35.0",
     "tslint": "~5.15.0",
     "typescript": "~3.4.3"
   }

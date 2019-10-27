@@ -9,15 +9,19 @@ import {
   BlockList,
   BlockEditorKeyboardShortcuts
 } from '@wordpress/block-editor';
-import { Popover } from "@wordpress/components";
-import { registerCoreBlocks } from '@wordpress/block-library';
-import { BlockEditorProviderComponent } from '../gutenberg/block-editor-provider.component';
+import { BlockEditorProviderComponent } from './block-editor-provider.component';
 import {
   EditorHistoryRedo,
   EditorHistoryUndo,
 } from '@wordpress/editor';
 import { EditorHistoryUndoComponent } from './editor-history-undo.component';
 import { EditorHistoryRedoComponent } from './editor-history-redo.component';
+import {
+	Button,
+	Popover,
+	SlotFillProvider,
+	DropZoneProvider,
+} from '@wordpress/components';
 
 const components = [
   BlockEditorProviderComponent,
@@ -34,7 +38,7 @@ const components = [
   exports: components,
   schemas: [NO_ERRORS_SCHEMA]
 })
-export class GutenbergModule {
+export class NgGutenbergModule {
 
   constructor() {
     //registerCoreBlocks();
@@ -44,6 +48,9 @@ export class GutenbergModule {
     registerElement('ObserveTyping', () => ObserveTyping);
     registerElement('BlockList', () => BlockList);
     registerElement('Popover', () => Popover);
+    registerElement('Button', () => Button);
+    registerElement('SlotFillProvider', () => SlotFillProvider);
+    registerElement('DropZoneProvider', () => DropZoneProvider);
     registerElement('EditorHistoryUndo', () => EditorHistoryUndo);
     registerElement('EditorHistoryRedo', () => EditorHistoryRedo);
     registerElement('BlockEditorKeyboardShortcuts', () => BlockEditorKeyboardShortcuts);
