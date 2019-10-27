@@ -15,11 +15,9 @@
     "wordpress",
     "gutenberg"
   ],
-	"license": "GPL-2.0-or-later",
-  "peerDependencies": {
+  "license": "GPL-2.0-or-later",
+  "dependencies": {
     "@angular-react/core": "^1.0.1",
-    "@angular/common": "^8.0.3",
-    "@angular/core": "^8.0.3",
     "@types/react": "^16.9.11",
     "@types/react-dom": "^16.9.3",
     "@wordpress/api-fetch": "^3.6.3",
@@ -32,5 +30,10 @@
     "react-dom": "^16.11.0",
     "rxjs": "~6.4.0",
     "tslib": "^1.9.0"
+  },
+  "peerDependencies": {
+    
+    "@angular/common": "^8.0.3",
+    "@angular/core": "^8.0.3"
   }
 }
