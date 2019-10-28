@@ -1,0 +1,15 @@
+@import "./base-styles/colors";
+@import "./base-styles/variables";
+@import "./base-styles/mixins";
+@import "./base-styles/breakpoints";
+@import "./base-styles/animations";
+@import "./base-styles/z-index";
+@import "./base-styles/reset";
+@import "./base-styles/editor-styles";
+
+@import '@wordpress/components/build-style/style.css';
+@import '@wordpress/block-editor/build-style/style.css';
+@import '@wordpress/block-library/build-style/style.css';
+@import '@wordpress/block-library/build-style/editor.css';
+@import '@wordpress/block-library/build-style/theme.css';
+@import '@wordpress/format-library/build-style/style.css';
